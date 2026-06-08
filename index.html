@@ -249,7 +249,7 @@
         />
       </section>
 
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="wrapper projects__wrapper">
           <div class="projects__grid">
             <h2 class="projects__headline header-xl section-heading">
@@ -260,7 +260,73 @@
               Contact me
             </a>
 
-            <div class="projects__item">
+            <div
+              class="projects__filters"
+              role="group"
+              aria-label="Filter projects by category"
+            >
+              <button
+                type="button"
+                class="projects__filter projects__filter--active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="robotics"
+                aria-pressed="false"
+              >
+                Robotics
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="computer-vision"
+                aria-pressed="false"
+              >
+                Computer Vision
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="deep-learning"
+                aria-pressed="false"
+              >
+                Deep Learning
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="edge-ai"
+                aria-pressed="false"
+              >
+                Edge AI
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="automation"
+                aria-pressed="false"
+              >
+                Automation
+              </button>
+              <button
+                type="button"
+                class="projects__filter"
+                data-filter="deployment"
+                aria-pressed="false"
+              >
+                Deployment
+              </button>
+            </div>
+
+            <div
+              class="projects__item"
+              data-categories="robotics computer-vision edge-ai"
+            >
               <picture class="projects__picture">
                 <img
                   class="projects__image"
@@ -294,7 +360,10 @@
               </div>
             </div>
 
-            <div class="projects__item">
+            <div
+              class="projects__item"
+              data-categories="computer-vision deep-learning deployment"
+            >
               <picture class="projects__picture">
                 <img
                   class="projects__image"
@@ -328,7 +397,10 @@
               </div>
             </div>
 
-            <div class="projects__item">
+            <div
+              class="projects__item"
+              data-categories="deep-learning computer-vision"
+            >
               <picture class="projects__picture">
                 <img
                   class="projects__image"
@@ -365,7 +437,10 @@
               </div>
             </div>
 
-            <div class="projects__item">
+            <div
+              class="projects__item"
+              data-categories="computer-vision automation"
+            >
               <picture class="projects__picture">
                 <img
                   class="projects__image"
@@ -400,6 +475,33 @@
                   class="underline"
                 >
                   View Code
+                </a>
+              </div>
+            </div>
+
+            <div class="projects__item" data-categories="automation">
+              <div
+                class="projects__picture projects__picture--placeholder"
+                aria-hidden="true"
+              >
+                <span class="projects__placeholder-text">n8n Automation</span>
+              </div>
+
+              <h3 class="projects__name">n8n Business Automation Workflow</h3>
+
+              <p class="projects__tags">
+                <span>Automation</span>
+                <span>n8n</span>
+                <span>APIs</span>
+                <span>Workflow Engineering</span>
+              </p>
+
+              <div class="projects__links">
+                <a
+                  href="./projects/n8n-business-automation.html"
+                  class="underline"
+                >
+                  View Project
                 </a>
               </div>
             </div>
@@ -571,6 +673,31 @@
     </footer>
 
     <script>
+      // Project category filters
+      const filterButtons = document.querySelectorAll(".projects__filter");
+      const projectItems = document.querySelectorAll(
+        ".projects__item[data-categories]"
+      );
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const selectedFilter = button.dataset.filter;
+
+          filterButtons.forEach(function (btn) {
+            const isActive = btn === button;
+            btn.classList.toggle("projects__filter--active", isActive);
+            btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          projectItems.forEach(function (item) {
+            const categories = item.dataset.categories.split(" ");
+            const isVisible =
+              selectedFilter === "all" || categories.includes(selectedFilter);
+            item.classList.toggle("projects__item--hidden", !isVisible);
+          });
+        });
+      });
+
       const contactForm = document.getElementById("contactForm");
       const formStatus = document.getElementById("formStatus");
       const submitButton = document.getElementById("submitButton");

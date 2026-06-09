@@ -38,11 +38,6 @@
         background-size: 8px 4px;
       }
 
-      .form-status {
-        margin-top: 20px;
-        font-size: 1rem;
-        color: var(--text2);
-      }
     </style>
 
     <title>Alargam Mohamed Osman | AI Software Engineer</title>
@@ -162,25 +157,26 @@
 
             <p class="about__description">
               Software Engineer specializing in Artificial Intelligence,
-              Computer Vision, Robotics, and Automation systems. I focus on
-              building practical AI-powered software that transforms machine
-              learning models into real applications, tools, and workflows that
-              can be used in real-world environments.
+              Computer Vision, Robotics, Edge AI, and Automation systems. I focus
+              on building practical AI-powered software that transforms machine
+              learning models into real-world applications, intelligent tools,
+              and scalable automation workflows.
             </p>
 
             <p class="about__description">
               My work combines software engineering with applied AI, including
-              Python, OpenCV, PyTorch, TensorFlow, YOLO, ROS 2, Edge AI, model
-              deployment, and system integration. I build end-to-end solutions
-              such as computer vision pipelines, recognition systems, autonomous
-              robotics platforms, medical image enhancement projects, and
-              intelligent automation workflows.
+              Python, OpenCV, PyTorch, TensorFlow, YOLO, ROS 2, embedded systems,
+              model deployment, and system integration. I build end-to-end
+              solutions such as computer vision pipelines, face recognition
+              systems, autonomous robotics platforms, medical image enhancement
+              models, and AI-powered automation workflows.
             </p>
 
             <p class="about__description">
-              I also build automation solutions using n8n, APIs, and AI
-              services to create scalable workflows for business and technical
-              use cases.
+              I also design automation systems using n8n, APIs, Google Sheets,
+              WordPress, and AI services to streamline business processes, reduce
+              repetitive work, and connect software tools into reliable
+              production-style workflows.
             </p>
           </div>
         </div>
@@ -201,32 +197,47 @@
 
           <div class="skills__item">
             <h3 class="skills__title">Computer Vision</h3>
-            <p class="skills__description">OpenCV, YOLO & Image Processing</p>
+            <p class="skills__description">OpenCV, YOLO, Image Processing</p>
           </div>
 
           <div class="skills__item">
             <h3 class="skills__title">Deep Learning</h3>
-            <p class="skills__description">PyTorch & TensorFlow</p>
+            <p class="skills__description">PyTorch, TensorFlow</p>
           </div>
 
           <div class="skills__item">
             <h3 class="skills__title">Edge AI</h3>
-            <p class="skills__description">ONNX, TensorRT & Optimization</p>
+            <p class="skills__description">Real-Time AI Optimization</p>
           </div>
 
           <div class="skills__item">
             <h3 class="skills__title">Robotics</h3>
-            <p class="skills__description">ROS 2, SLAM & Navigation</p>
+            <p class="skills__description">Autonomous Systems</p>
+          </div>
+
+          <div class="skills__item">
+            <h3 class="skills__title">ROS 2</h3>
+            <p class="skills__description">Robot Middleware</p>
+          </div>
+
+          <div class="skills__item">
+            <h3 class="skills__title">SLAM</h3>
+            <p class="skills__description">Mapping & Navigation</p>
+          </div>
+
+          <div class="skills__item">
+            <h3 class="skills__title">Sensor Fusion</h3>
+            <p class="skills__description">LiDAR, Camera & IMU</p>
           </div>
 
           <div class="skills__item">
             <h3 class="skills__title">Embedded Systems</h3>
-            <p class="skills__description">ESP32, Raspberry Pi & micro-ROS</p>
+            <p class="skills__description">ESP32, Raspberry Pi</p>
           </div>
 
           <div class="skills__item">
             <h3 class="skills__title">C++</h3>
-            <p class="skills__description">Embedded & Robotics Development</p>
+            <p class="skills__description">Robotics & Embedded Development</p>
           </div>
 
           <div class="skills__item">
@@ -235,8 +246,18 @@
           </div>
 
           <div class="skills__item">
+            <h3 class="skills__title">TensorRT / ONNX</h3>
+            <p class="skills__description">Model Optimization</p>
+          </div>
+
+          <div class="skills__item">
             <h3 class="skills__title">Automation</h3>
-            <p class="skills__description">n8n, APIs & Workflow Engineering</p>
+            <p class="skills__description">n8n, APIs, Workflow Engineering</p>
+          </div>
+
+          <div class="skills__item">
+            <h3 class="skills__title">Version Control / Git</h3>
+            <p class="skills__description">GitHub & Collaborative Development</p>
           </div>
         </div>
 
@@ -292,40 +313,16 @@
               <button
                 type="button"
                 class="projects__filter"
-                data-filter="deep-learning"
-                aria-pressed="false"
-              >
-                Deep Learning
-              </button>
-              <button
-                type="button"
-                class="projects__filter"
-                data-filter="edge-ai"
-                aria-pressed="false"
-              >
-                Edge AI
-              </button>
-              <button
-                type="button"
-                class="projects__filter"
                 data-filter="automation"
                 aria-pressed="false"
               >
                 Automation
               </button>
-              <button
-                type="button"
-                class="projects__filter"
-                data-filter="deployment"
-                aria-pressed="false"
-              >
-                Deployment
-              </button>
             </div>
 
             <div
               class="projects__item"
-              data-categories="robotics computer-vision edge-ai"
+              data-categories="robotics"
             >
               <picture class="projects__picture">
                 <img
@@ -362,7 +359,7 @@
 
             <div
               class="projects__item"
-              data-categories="computer-vision deep-learning deployment"
+              data-categories="computer-vision"
             >
               <picture class="projects__picture">
                 <img
@@ -399,7 +396,7 @@
 
             <div
               class="projects__item"
-              data-categories="deep-learning computer-vision"
+              data-categories="computer-vision"
             >
               <picture class="projects__picture">
                 <img
@@ -439,7 +436,7 @@
 
             <div
               class="projects__item"
-              data-categories="computer-vision automation"
+              data-categories="computer-vision"
             >
               <picture class="projects__picture">
                 <img
@@ -480,12 +477,15 @@
             </div>
 
             <div class="projects__item" data-categories="automation">
-              <div
-                class="projects__picture projects__picture--placeholder"
-                aria-hidden="true"
-              >
-                <span class="projects__placeholder-text">n8n Automation</span>
-              </div>
+              <picture class="projects__picture">
+                <img
+                  class="projects__image"
+                  src="./assets/images/n8n-seo/n8n_logo.png"
+                  alt="n8n automation workflow logo"
+                  width="343"
+                  height="253"
+                />
+              </picture>
 
               <h3 class="projects__name">n8n Business Automation Workflow</h3>
 
@@ -517,88 +517,21 @@
             </h2>
 
             <p class="contact__description">
-              Have an AI, computer vision, automation, or software project in
-              mind? Send me a message and let's discuss how I can help design,
-              build, or improve a practical intelligent system for your idea,
-              product, or business.
+              Need an intelligent software solution? I design and build practical
+              AI, computer vision, robotics, and automation systems that solve
+              real problems and deliver measurable value. Contact me directly on
+              WhatsApp to discuss your project.
             </p>
+
+            <a
+              href="https://wa.me/201154492135"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact__whatsapp underline"
+            >
+              START A WHATSAPP CHAT
+            </a>
           </div>
-
-          <form
-            id="contactForm"
-            action="https://formsubmit.co/ajax/alargam.yagoub@gmail.com"
-            method="POST"
-            class="contact__form"
-          >
-            <input
-              type="hidden"
-              name="_subject"
-              value="New message from portfolio website"
-            />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-
-            <div class="contact__control">
-              <label for="name" class="visually-hidden">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                required
-              />
-              <img
-                src="./assets/images/icon-invalid.svg"
-                alt=""
-                class="contact__invalid-icon"
-                width="24"
-                height="24"
-              />
-            </div>
-
-            <div class="contact__control">
-              <label for="email" class="visually-hidden">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
-              <img
-                src="./assets/images/icon-invalid.svg"
-                alt=""
-                class="contact__invalid-icon"
-                width="24"
-                height="24"
-              />
-            </div>
-
-            <div class="contact__control">
-              <label for="message" class="visually-hidden">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="3"
-                placeholder="Message"
-                required
-              ></textarea>
-              <img
-                src="./assets/images/icon-invalid.svg"
-                alt=""
-                class="contact__invalid-icon"
-                width="24"
-                height="24"
-              />
-            </div>
-
-            <div class="contact__control align-right">
-              <button type="submit" id="submitButton">Send Message</button>
-            </div>
-
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
         </div>
 
         <img
@@ -696,46 +629,6 @@
             item.classList.toggle("projects__item--hidden", !isVisible);
           });
         });
-      });
-
-      const contactForm = document.getElementById("contactForm");
-      const formStatus = document.getElementById("formStatus");
-      const submitButton = document.getElementById("submitButton");
-
-      contactForm.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        formStatus.textContent = "Sending...";
-        formStatus.style.color = "var(--text2)";
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending...";
-
-        const formData = new FormData(contactForm);
-
-        try {
-          const response = await fetch(contactForm.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-              Accept: "application/json",
-            },
-          });
-
-          if (response.ok) {
-            formStatus.textContent = "Message sent successfully!";
-            formStatus.style.color = "var(--accent)";
-            contactForm.reset();
-          } else {
-            formStatus.textContent = "Something went wrong. Please try again.";
-            formStatus.style.color = "var(--invalid)";
-          }
-        } catch (error) {
-          formStatus.textContent = "Network error. Please try again.";
-          formStatus.style.color = "var(--invalid)";
-        }
-
-        submitButton.disabled = false;
-        submitButton.textContent = "Send Message";
       });
     </script>
   </body>
